@@ -5,9 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
-import com.browser.Driver;
 import com.browser.DriverManager;
-import com.reports.ExtentReport;
 import com.reports.LogStatus;
 
 public class SeleniumUtils {
@@ -49,8 +47,4 @@ public class SeleniumUtils {
 		}
 		return flag;
 	}
-
-	
-	
-	
 }

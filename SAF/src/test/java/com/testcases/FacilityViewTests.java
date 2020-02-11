@@ -43,11 +43,4 @@ public class FacilityViewTests extends BaseTest{
 		//Assert.assertEquals(1, 2);
 		
 	}
-	
-	
-	
-	
-	
-	
-
 }

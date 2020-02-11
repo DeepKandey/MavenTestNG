@@ -10,9 +10,7 @@ import org.testng.SkipException;
 import com.utils.ReadPropertyFile;
 
 public class RemoteConfiguration {
-
 	
-
 	public static void setUpRemote() {
 		
 			Runtime runtime=Runtime.getRuntime();
@@ -116,7 +114,4 @@ public class RemoteConfiguration {
 			
 		}
 	}
-
-
-
 }

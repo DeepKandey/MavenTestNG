@@ -8,7 +8,6 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 
 import com.reports.LogStatus;
 
-
 /*
  * WebDriver listener will listen all driver events. It can be modified according to the requirements.
  */
@@ -40,7 +39,7 @@ public class EventCapture implements WebDriverEventListener {
 	}
 
 	public void afterNavigateTo(String url, WebDriver driver) {
-		//LogStatus.pass("Navigated to url : "+ url );
+		// LogStatus.pass("Navigated to url : "+ url );
 
 	}
 
@@ -90,8 +89,8 @@ public class EventCapture implements WebDriverEventListener {
 	}
 
 	public void afterClickOn(WebElement element, WebDriver driver) {
-		
-		LogStatus.pass("Clicking is successfull on "+ element);
+
+		LogStatus.pass("Clicking is successfull on " + element);
 		LogStatus.pass("Screenshot below", TestUtils.pullScreenshotPath());
 
 	}
@@ -127,12 +126,9 @@ public class EventCapture implements WebDriverEventListener {
 	}
 
 	public void onException(Throwable throwable, WebDriver driver) {
-		try 
-		{
+		try {
 			TestUtils.takeScreenshot();
-		}
-		catch (Exception e) 
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 

@@ -31,7 +31,7 @@ public class BaseTest {
 	@BeforeSuite
 	public void beforeSuite() throws Exception {
 		ExtentReport.initialize();
-		if(ReadPropertyFile.get("RunMode").equalsIgnoreCase("Remote"))
+		if (ReadPropertyFile.get("RunMode").equalsIgnoreCase("Remote"))
 			RemoteConfiguration.setUpRemote();
 	}
 
@@ -40,7 +40,7 @@ public class BaseTest {
 
 		ExtentReport.report.flush();
 		TestUtils.sendEmailWithResults();
-		if(ReadPropertyFile.get("RunMode").equalsIgnoreCase("Remote")) {
+		if (ReadPropertyFile.get("RunMode").equalsIgnoreCase("Remote")) {
 			RemoteConfiguration.shutDownRemote();
 		}
 	}
