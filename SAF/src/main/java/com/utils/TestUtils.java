@@ -25,6 +25,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.DataProvider;
 
 import com.browser.DriverManager;
+import com.constants.Constants;
 import com.listener.ListenerClass;
 import com.reports.ExtentReport;
 
@@ -288,9 +289,11 @@ public class TestUtils {
 	 * the same test case name it will be treated as iteration.
 	 * 
 	 */
+
 	@DataProvider(name = "dataProviderForIterations", parallel = true)
 	public static Object[][] supplyDataForIterations(Method m) {
-		return getDataForDataprovider(ReadPropertyFile.get("TestDataLocation"), "TestData", m.getName());
+		return getDataForDataprovider(ReadPropertyFile.get("TestDataLocation"), Constants.TESTDATASHEETNAME,
+				m.getName());
 	}
 
 	/*

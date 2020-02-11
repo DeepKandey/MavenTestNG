@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 import com.browser.DriverManager;
 import com.utils.DynamicXpath;
-import com.utils.SeleniumUtils;
 import com.utils.TestUtils;
 
 public class HomePage extends BasePage {
@@ -41,19 +40,21 @@ public class HomePage extends BasePage {
 	public static String txtbox_searchbox = "//*[@name='%replaceable%']";
 
 	public void logout() {
+
 		String a = "abcd";
-		SeleniumUtils.click(lnk_asakthiv);
-		SeleniumUtils.click(lnk_logout);
-		SeleniumUtils.click(btn_logoutonframe);
+		click(lnk_asakthiv);
+		click(lnk_logout);
+		click(btn_logoutonframe);
 
 		// clicking on dynamic element
 		searchBox.findElement(By.xpath("/a/span[@id='" + a + "']")).click();
 	}
 
 	public void searchOnGoogle(String value) {
+
 		// SeleniumUtils.sendkeys(searchBox, "automation");
 		String newxpath = DynamicXpath.get(txtbox_searchbox, "q");
-		SeleniumUtils.sendkeys(DriverManager.getDriver().findElement(By.xpath(newxpath)), value);
+		sendkeys(DriverManager.getDriver().findElement(By.xpath(newxpath)), value);
 	}
 
 	public boolean checkDefaultTabSelectedIsGlobalView() {
