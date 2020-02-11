@@ -115,7 +115,6 @@ public class Driver {
 	/*
 	 * Used to listen to driver events
 	 */
-
 	private void EventHandlerInit() {
 		EventFiringWebDriver eventhandle = new EventFiringWebDriver(driver);
 		EventCapture capture = new EventCapture();
